@@ -32,6 +32,18 @@ const data = {
   ],
 };
 
+const second = {
+  datasets: [
+    {
+      data: [60, 30, 10],
+      spacing: 5,
+      hoverOffset: 10,
+      cutout: '25%',
+      radius: '90%',
+    },
+  ],
+};
+
 const PieChart = () => {
   return (
     <div className="full-screen-container">
@@ -70,9 +82,17 @@ const PieChart = () => {
           },
           cutoutPercentage: 0,
           onClick: (evt, items, chart) => {
+            if (items.length !== 1) {
+              return
+            }
+
             var datasetIndex = items[0].datasetIndex;
             var dataIndex = items[0].index;
             console.log(datasetIndex + " datasetIndex " + dataIndex + " dataIndex");
+            chart.data = second;
+            chart.update({
+                preservation: true,
+            });
           },
           plugins: {
             tooltip: {
