@@ -9,21 +9,111 @@ Chart.register(ChartDataLabels);
 const data = {
   datasets: [
     {
-      data: [5, 15, 20, 20, 5, 10, 10, 5, 3, 2, 2, 3],
+      data: [8190, 8190, 16382, 16382, 16382],
+      subnets: [
+        {
+          cidr: '192.168.0.0/19',
+          netmask: '255.255.224.0',
+          range: '192.168.0.0 - 192.168.31.255',
+          usable: '192.168.0.1 - 192.168.31.254',
+          hosts: 8190,
+        },
+        {
+          cidr: '192.168.32.0/19',
+          netmask: '255.255.224.0',
+          range: '192.168.32.0 - 192.168.63.255',
+          usable: '192.168.32.1 - 192.168.63.254',
+          hosts: 8190,
+        },
+        {
+          cidr: '192.168.64.0/18',
+          netmask: '255.255.192.0',
+          range: '192.168.64.0 - 192.168.127.255',
+          usable: '192.168.64.1 - 192.168.127.254',
+          hosts: 16382,
+        },
+        {
+          cidr: '192.168.128.0/18',
+          netmask: '255.255.192.0',
+          range: '192.168.128.0 - 192.168.191.255',
+          usable: '192.168.128.1 - 192.168.191.254',
+          hosts: 16382,
+        },
+        {
+          cidr: '192.168.192.0/18',
+          netmask: '255.255.192.0',
+          range: '192.168.192.0 - 192.168.255.255',
+          usable: '192.168.192.1 - 192.168.255.254',
+          hosts: 16382,
+        }
+      ],
       spacing: 30,
       hoverOffset: 20,
       cutout: '25%',
       radius: '90%',
     },
     {
-      data: [20, 40, 15, 15, 5, 5],
+      data: [16382, 16382, 16382, 16382],
+      subnets: [
+        {
+          cidr: '192.168.0.0/18',
+          netmask: '255.255.192.0	',
+          range: '192.168.0.0 - 192.168.63.255',
+          usable: '192.168.0.1 - 192.168.63.254',
+          hosts: 16382,
+        },
+        {
+          cidr: '192.168.64.0/18',
+          netmask: '255.255.192.0',
+          range: '192.168.64.0 - 192.168.127.255',
+          usable: '192.168.64.1 - 192.168.127.254',
+          hosts: 16382,
+        },
+        {
+          cidr: '192.168.128.0/18',
+          netmask: '255.255.192.0',
+          range: '192.168.128.0 - 192.168.191.255',
+          usable: '192.168.128.1 - 192.168.191.254',
+          hosts: 16382,
+        },
+        {
+          cidr: '192.168.192.0/18',
+          netmask: '255.255.192.0',
+          range: '192.168.192.0 - 192.168.255.255',
+          usable: '192.168.192.1 - 192.168.255.254',
+          hosts: 16382,
+        }
+      ],
       spacing: 10,
       hoverOffset: 15,
       cutout: '25%',
       radius: '90%',
     },
     {
-      data: [60, 30, 10],
+      data: [32766, 16382, 16382],
+      subnets: [
+        {
+          cidr: '192.168.0.0/17',
+          netmask: '255.255.128.0',
+          range: '192.168.0.0 - 192.168.127.255',
+          usable: '192.168.0.1 - 192.168.127.254',
+          hosts: 32766,
+        },
+        {
+          cidr: '192.168.128.0/18',
+          netmask: '255.255.192.0',
+          range: '192.168.128.0 - 192.168.191.255',
+          usable: '192.168.128.1 - 192.168.191.254',
+          hosts: 16382,
+        },
+        {
+          cidr: '192.168.192.0/18',
+          netmask: '255.255.192.0',
+          range: '192.168.192.0 - 192.168.255.255',
+          usable: '192.168.192.1 - 192.168.255.254',
+          hosts: 16382,
+        }
+      ],
       spacing: 5,
       hoverOffset: 10,
       cutout: '25%',
@@ -35,9 +125,55 @@ const data = {
 const second = {
   datasets: [
     {
-      data: [60, 30, 10],
-      spacing: 5,
-      hoverOffset: 10,
+      data: [8190, 8190, 16382],
+      subnets: [
+        {
+          cidr: '192.168.0.0/19',
+          netmask: '255.255.224.0',
+          range: '192.168.0.0 - 192.168.31.255',
+          usable: '192.168.0.1 - 192.168.31.254',
+          hosts: 8190,
+        },
+        {
+          cidr: '192.168.32.0/19',
+          netmask: '255.255.224.0',
+          range: '192.168.32.0 - 192.168.63.255',
+          usable: '192.168.32.1 - 192.168.63.254',
+          hosts: 8190,
+        },
+        {
+          cidr: '192.168.64.0/18',
+          netmask: '255.255.192.0',
+          range: '192.168.64.0 - 192.168.127.255',
+          usable: '192.168.64.1 - 192.168.127.254',
+          hosts: 16382,
+        },
+      ],
+      spacing: 30,
+      hoverOffset: 20,
+      cutout: '25%',
+      radius: '90%',
+    },
+    {
+      data: [16382, 16382],
+      subnets: [
+        {
+          cidr: '192.168.0.0/18',
+          netmask: '255.255.192.0	',
+          range: '192.168.0.0 - 192.168.63.255',
+          usable: '192.168.0.1 - 192.168.63.254',
+          hosts: 16382,
+        },
+        {
+          cidr: '192.168.64.0/18',
+          netmask: '255.255.192.0',
+          range: '192.168.64.0 - 192.168.127.255',
+          usable: '192.168.64.1 - 192.168.127.254',
+          hosts: 16382,
+        },
+      ],
+      spacing: 30,
+      hoverOffset: 20,
       cutout: '25%',
       radius: '90%',
     },
@@ -78,7 +214,7 @@ const PieChart = () => {
             animateScale: true
           },
           centerText: {
-            text: '10.0.0.0/16'
+            text: '192.168.0.0/16'
           },
           cutoutPercentage: 0,
           onClick: (evt, items, chart) => {
@@ -89,12 +225,12 @@ const PieChart = () => {
             var datasetIndex = items[0].datasetIndex;
             var dataIndex = items[0].index;
             console.log(datasetIndex + " datasetIndex " + dataIndex + " dataIndex");
-            if (chart.options.centerText.text === '10.0.0.0/16') {
+            if (chart.options.centerText.text === '192.168.0.0/16') {
               chart.data = second;
-              chart.options.centerText.text = '10.0.0.0/24'
+              chart.options.centerText.text = '192.168.0.0/17'
             } else {
               chart.data = data;
-              chart.options.centerText.text = '10.0.0.0/16'
+              chart.options.centerText.text = '192.168.0.0/16'
             }
             chart.update({
                 preservation: true,
@@ -103,11 +239,27 @@ const PieChart = () => {
           plugins: {
             tooltip: {
               callbacks: {
+                 beforeTitle: charts => {
+                  return 'Subnet Name';
+                 },
+                 title: charts => {
+                  return charts[0].dataset.subnets[charts[0].dataIndex].cidr;
+                 },
+                 afterTitle: charts => {
+                  return charts[0].dataset.subnets[charts[0].dataIndex].netmask;
+                 },
+                 beforeBody: charts => {
+                  return charts[0].dataset.subnets[charts[0].dataIndex].range;
+                 },
                  label: chart => {
-                    var datasetIndex = chart.datasetIndex;
-                    var dataIndex = chart.dataIndex;
-                    return datasetIndex + " datasetIndex " + dataIndex + " dataIndex";
-                 }
+                    return ' Hosts: ' + chart.dataset.subnets[chart.dataIndex].hosts;
+                 },
+                 beforeFooter: charts => {
+                   return 'Usable:'
+                  },
+                  footer: charts => {
+                  return charts[0].dataset.subnets[charts[0].dataIndex].usable;
+                 },
               }
             },
             datalabels: {
@@ -118,7 +270,15 @@ const PieChart = () => {
               },
               clamp: true,
               formatter: (value, context) => {
-                return ['datasetIndex=' + context.datasetIndex, 'dataIndex=' + context.dataIndex, value]
+                var subnet = context.dataset.subnets[context.dataIndex]
+                return [
+                  'Subnet Name',
+                  subnet.cidr,
+                  // 'netmask: ' + subnet.netmask,
+                  // 'range: ' + subnet.range,
+                  // 'usable: ' + subnet.usable,
+                  'Hosts: ' + value,
+                ]
               },
               textAlign: 'center'
             }
