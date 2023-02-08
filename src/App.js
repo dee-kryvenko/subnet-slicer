@@ -89,7 +89,13 @@ const PieChart = () => {
             var datasetIndex = items[0].datasetIndex;
             var dataIndex = items[0].index;
             console.log(datasetIndex + " datasetIndex " + dataIndex + " dataIndex");
-            chart.data = second;
+            if (chart.options.centerText.text === '10.0.0.0/16') {
+              chart.data = second;
+              chart.options.centerText.text = '10.0.0.0/24'
+            } else {
+              chart.data = data;
+              chart.options.centerText.text = '10.0.0.0/16'
+            }
             chart.update({
                 preservation: true,
             });
