@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/subnet-slicer/static/css/main.555b39ef.css",
-    "main.js": "/subnet-slicer/static/js/main.c6277032.js",
+    "main.js": "/subnet-slicer/static/js/main.b4eb0c0e.js",
     "static/js/787.0fb09ddd.chunk.js": "/subnet-slicer/static/js/787.0fb09ddd.chunk.js",
     "index.html": "/subnet-slicer/index.html",
     "main.555b39ef.css.map": "/subnet-slicer/static/css/main.555b39ef.css.map",
-    "main.c6277032.js.map": "/subnet-slicer/static/js/main.c6277032.js.map",
+    "main.b4eb0c0e.js.map": "/subnet-slicer/static/js/main.b4eb0c0e.js.map",
     "787.0fb09ddd.chunk.js.map": "/subnet-slicer/static/js/787.0fb09ddd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.555b39ef.css",
-    "static/js/main.c6277032.js"
+    "static/js/main.b4eb0c0e.js"
   ]
 }
